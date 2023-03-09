@@ -1,0 +1,219 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Depression Test - Time to Change{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="static/formStyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="mainay erase kia tha">
+  <title>Anxiety Test</title>
+</head>
+{% block body %}
+<body style="background-image: url('static/images/bg_index.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;" >
+  <section class="section">
+  <div class="container" style="width: 80%%; margin: 6rem auto 6rem auto; box-shadow: 0 0.2rem 1.3rem 0.2rem rgba(0, 0, 0, 0.1); border-radius: 0.5rem; background-color: #fff; padding-bottom: 5rem;" >
+  <div class="header" style="padding: 4.5rem; margin-bottom: 2rem;">
+    <div class="column-header" style="float: left; width: 100%; padding-right: 5rem; padding-left: 5rem; margin-right: 6%;">
+      <h1 id="title"> Depression Test - Survey Form</h1>
+        <p id="description" style="color:black; padding-bottom: 2rem;">This survey is completely anonymous. Your feedback is entirely free (absolutely no strings attached) and confidential, unless you share it with someone.</p>
+      </div>
+  </div>
+  
+  <form id="survey-form" action="{% url 'formpage2' %}" method="post" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+  border-radius: 0.5rem; margin-right: 6%">
+    {% csrf_token %}
+
+   <div class="form-group">
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%; padding-top: 0.1rem; ">
+   <b><p style="color: black;" >What's your biological sex?</p></b>
+      <label style="color: black;">
+        <input
+          name="gender"
+          value="Male"
+          type="radio"
+          class="input-radio"
+          required/>
+          Male &nbsp;
+        </label>
+      <label style="color: black;">
+        <input
+          name="gender"
+          value="Female"
+          type="radio"
+          class="input-radio"/>
+          Female
+      </label>  
+    </div>
+
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%">
+      <b><p style="color: black;">What is your age?</p></b>
+      <input name='age' type="number" min="12" max="100" value="1" placeholder="Your Age" default="12">
+    </div>
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%">
+      <b><p style="color: black;">What's your level of education?</p></b>
+      <label style="color: black;">
+        <input
+          name="educationallevel"
+          value="Middle"
+          type="radio"
+          class="input-radio"
+          required
+          />
+          Middle &nbsp;</label>
+      <label style="color: black;">
+        <input
+          name="educationallevel"
+          value="Secondary"
+          type="radio"
+          class="input-radio"/>
+          Secondary &nbsp;
+      </label>
+      <label style="color: black;">
+        <input
+          name="educationallevel"
+          value="Intermediate"
+          type="radio"
+          class="input-radio"/>
+          Intermediate &nbsp;
+        </label>
+      <label style="color: black;">
+        <input
+          name="educationallevel"
+          value="Undergraduate"
+          type="radio"
+          class="input-radio"/>
+          Undergraduate &nbsp;
+      </label>
+      <label style="color: black;">
+        <input
+          name="educationallevel"
+          value="Graduate"
+          type="radio"
+          class="input-radio"/>
+          Graduate</label>
+    </div>
+
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%">
+      <b><p style="color: black;">What's your marital status?</p></b>
+      <label style="color: black;">
+        <input
+          name="maritalstatus"
+          value="Married"
+          type="radio"
+          class="input-radio"
+          required/>
+          Married &nbsp;
+        </label>
+      <label style="color: black;">
+        <input
+          name="maritalstatus"
+          value="Not Married"
+          type="radio"
+          class="input-radio"/>
+          Not Married
+      </label>  
+    </div>
+
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%">
+      <b><p style="color: black;">Are you employed or not?</p></b>
+      <label style="color: black;">
+        <input
+          name="employmentstatus"
+          value="Employed"
+          type="radio"
+          class="input-radio"
+          required/>
+          Employed &nbsp;
+        </label>
+      <label style="color: black;">
+        <input
+          name="employmentstatus"
+          value="Unemployed"
+          type="radio"
+          class="input-radio"/>
+          Unemployed
+      </label>  
+    </div>
+
+
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%">
+      <b><p style="color: black;">Select the province?</p></b>
+      <label style="color: black;">
+        <input
+          name="province"
+          value="Punjab"
+          type="radio"
+          class="input-radio"
+          required/>
+          Punjab &nbsp;
+        </label>
+      <label style="color: black;">
+        <input
+          name="province"
+          value="Sindh"
+          type="radio"
+          class="input-radio"/>
+          Sindh &nbsp;
+      </label>
+      <label style="color: black;">
+        <input
+          name="province"
+          value="Balochistan"
+          type="radio"
+          class="input-radio"/>
+          Balochistan &nbsp;
+        </label>
+      <label style="color: black;">
+        <input
+          name="province"
+          value="Khyber Pakhtunkhwa"
+          type="radio"
+          class="input-radio"/>
+          KPK &nbsp;
+      </label>
+      <label style="color: black; padding-bottom: 2rem;">
+        <input
+          name="province"
+          value="Gilgit Baltistan"
+          type="radio"
+          class="input-radio"/>
+          Gilgit-Baltistan
+        </label>
+    </div>
+
+
+
+    
+
+    
+    <div class="form-group" style="padding-right: 5rem; width: 100%; padding-left: 5rem;
+    border-radius: 0.5rem; margin-right: 6%;">
+      <b>
+     <center> <button type="submit" id="submit" class="submit-button" style="  align: center;
+      display: inline-block;
+      padding-right: 1.5rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      background: #fd7e14;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;">
+         Submit
+      </button> <center>
+    </div></b>
+  </form>
+</div>
+</section>
+
+  </body>
+  {% endblock %}
+
+</html>

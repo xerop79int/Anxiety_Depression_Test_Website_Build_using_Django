@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <title>Depression/Anxiety Tests</title>
+  </head>
+  <body>
+    <!-- top section -->
+    <div class="intro py-3 bg-white text-center">
+      <div class="container">
+        <h2 class="text-info font-weight-bold display-3 my-4">Anxiety Test</h2>
+      </div>
+    </div>
+
+    <!--Result section  -->
+    <div class="result py-4 d-none bg-light text-center">
+      <div class="container lead">
+        <p>
+          You are <span class="text-info display-4 p-3">0%</span>Chemistry
+          Expert!💕
+        </p>
+      </div>
+    </div>
+
+    <!-- Quiz section -->
+    <div class="quiz py-4 bg-info">
+      <div class="container">
+        <h2 class="my-5 text-white">On with the questions...</h2>
+
+        <form class="quiz-form text-light">
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              1. Which macromolecules does not dissolve in water?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="A" />
+              <label class="form-check-label">Proteins</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="B" />
+              <label class="form-check-label">Lipids</label>
+            </div>
+          </div>
+
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              2. What are monomers of lipids?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="A" />
+              <label class="form-check-label">Amino acids</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="B" />
+              <label class="form-check-label">Fatty acids</label>
+            </div>
+          </div>
+
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              3. Which of the following is a polymer?
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="A" />
+              <label class="form-check-label">Nucleic acid</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="B" />
+              <label class="form-check-label"> Amino acid</label>
+            </div>
+          </div>
+
+          <div class="my-5">
+            <p class="lead font-weight-normal">
+              4. The isoletric point of and amino acid is defined as the pH
+            </p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="A" />
+              <label class="form-check-label"
+                >Of maximum eletrolytic mobility</label
+              >
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="B" />
+              <label class="form-check-label"
+                >Where the molecule carries no electric charge</label
+              >
+            </div>
+          </div>
+
+          <div class="text-center">
+            <input type="submit" class="btn btn-light btn-lg" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="static/js/test.js"></script>
+  </body>
+</html>

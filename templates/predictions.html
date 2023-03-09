@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Text Sentiment Analysis - Time to Change{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+  {% block body %}
+  <body style="background-image: url('static/images/bg_index.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
+
+    
+
+
+
+    <section class="ftco-section">
+    	<div class="container" style="width: 60%; margin: 6rem auto 6rem auto; box-shadow: 0 0.2rem 1.3rem 0.2rem rgba(0, 0, 0, 0.1); border-radius: 0.5rem; background-color: #fff; padding-top: 3rem; padding-bottom: 3rem; padding-right: 3rem; padding-left: 3rem; " >
+    		<div class="row d-flex justify-content-center mb-5 pb-3">
+          
+         
+                <form method="get" action="{% url 'sentiment_analysis' %}">
+                  <center><h2  style="color: black;">Text Sentiment Analyzer</h2></center>
+          <center><h3  style="color: black;"> Use sentiment analysis to quickly detect emotions in text data.</h3></center><hr><br>
+                    {% csrf_token %}
+                    <textarea rows="10" cols="80" name="text" style="border-color: #fd7e14; border-size: 100px; border-radius: 5px;" placeholder="Enter your text here" required></textarea><br>
+                    <center><input type="submit" style="align: center;
+                    display: inline-block;
+                    padding-right: 1.5rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 1.5rem;
+                    background: #fd7e14;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    border: none;" value="Analyze"></center>
+                </form>
+            </div>
+    	</div>
+    </section>
+  </body>
+  {% endblock %}
+</html>

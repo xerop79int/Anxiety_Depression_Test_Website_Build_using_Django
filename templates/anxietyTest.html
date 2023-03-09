@@ -1,0 +1,79 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+{% block title %}Anxiety Test - Time to Change{% endblock %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/anxietystyle.css">
+  <!-- Coding with nick -->
+  <title>Anxiety</title>
+</head>
+
+
+{% block body %}
+<body style="background-image: url('static/images/bg_index.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
+  <section class="section">
+    <div class="container" style="width: 60%; margin: 6rem auto 6rem auto; box-shadow: 0 0.2rem 1.3rem 0.2rem rgba(0, 0, 0, 0.1); border-radius: 0.5rem; background-color: #fff; " >
+    <div class="header" style="padding: 4.5rem; margin-bottom: 2rem;">
+  <input  type="hidden" id="Url" data-url="{% url 'mainscreen' %}" />
+  <div class="loader" id="loader"></div> 
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <h3 id="question">Question Text</h3><br>
+      
+        
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text" style="color: black;">Answer</label><br>
+        
+
+        
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text" style="color: black;">Answer</label><br>
+        
+
+        
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text" style="color: black;">Answer</label><br>
+        
+
+        
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text" style="color: black;">Answer</label><br>
+        
+
+      
+    </div>
+   
+    <center>
+    <button id="submit" style="  
+    align: center;
+    display: inline-block;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+    padding-left: 1.5rem;
+    background: #fd7e14;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    border: none;">Submit</button>
+    </center>
+   
+  </div>
+</div>
+</div>
+</section>
+<div>
+  <script src="static/js/anxietyscript.js"></script>
+</div>
+</body>
+{% endblock %}
+</html>

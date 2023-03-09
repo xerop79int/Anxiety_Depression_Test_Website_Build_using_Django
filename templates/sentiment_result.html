@@ -1,0 +1,56 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Text Sentiment Result - Time to Change{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/Depressionstyle.css">
+  <!-- Coding with nick -->
+  <title>Depression Test</title>
+</head>
+{% block body %}
+<body style="background-image: url('static/images/bg_index.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
+  <section class="section">
+    
+    <center><div class="container" style="width: 50%; margin: 6rem auto 6rem auto; box-shadow: 0 0.2rem 1.3rem 0.2rem rgba(0, 0, 0, 0.1); border-radius: 0.5rem; background-color: #fff; padding-top: 3rem; padding-bottom: 3rem; padding-left: 3rem; padding-right: 3rem; " >
+       
+            <h3 >The sentiment of <p style="color: #fd7e14;">"{{ text }}"</p></h3><hr>
+            <h4>Negative: <p style="color: #fd7e14;">{{ Negative }}%</p></h4>
+            <h4>Neutral: <p style="color: #fd7e14;">{{ Neutral }}%</p></h4>
+            <h4>Positive: <p style="color: #fd7e14;">{{ Positive }}%</p></h4>
+             </div><center>
+    
+
+  
+  
+  
+</section>
+
+  
+</body>
+{% endblock %}
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

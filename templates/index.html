@@ -1,0 +1,234 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Home - Time to Change{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+    {% block body %}
+        <body>
+          
+
+    <div class="hero-wrap" style="background-image: url('static/images/bg_index.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+              <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We all face challenges to our mental wellbeing, but there is a way through.</h1>
+             
+  
+              <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch Video</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <section class="ftco-counter ftco-intro" id="section-counter">
+          <div class="container">
+              <div class="row no-gutters">
+                  <div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 color-1 align-items-stretch">
+                <div class="text">
+                    <span>Depression and Anxiety Rate</span>
+                  <strong class="number" data-number="53697900">0</strong>
+                  <span>in overall population of Pakistan</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 color-2 align-items-stretch">
+                <div class="text">
+                    <h3 class="mb-4">Depression Test</h3>
+                    <p>Take a free self-test for anxiety to help you start planning your journey towards feeling better.</p>
+                    <p><a href="{% url 'formpage2' %}" class="btn btn-white px-3 py-2 mt-2">TAKE THE TEST</a></p>
+                    
+                </div>
+              </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 color-3 align-items-stretch">
+                <div class="text">
+                    <h3 class="mb-4">Anxiety Test</h3>
+                    <p>Take a free self-test for depression to help you start planning your journey towards feeling better.</p>
+                    <p><a href="{% url 'formpage' %}" class="btn btn-white px-3 py-2 mt-2">TAKE THE TEST</a></p>
+                </div>
+              </div>
+            </div>
+              </div>
+          </div>
+      </section>
+  
+      <section class="ftco-section">
+          <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+              <h2 class="mb-4">There are many pathways to getting support</h2>
+              <p>When we are anxious or depressed it can change the way we think, feel and act. Dealing with the tough times can be hard but you’re not alone. Take a small step by getting ideas or support on how to take care of yourself and others.</p>
+            </div>
+          </div>
+              <div class="row">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 d-flex services p-3 py-4 d-block">
+                <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
+                <div class="media-body pl-4">
+                  <h3 class="heading">Get Better</h3>
+                  <p>Overcoming depression and anxiety can be challenging, but there are many ways to start helping yourself and others.</p>
+                  <p><a href="{% url 'getbetterpage' %}" class="btn btn-white px-3 py-2 mt-2">VIEW MORE</a></p>
+                </div>
+              </div>      
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 d-flex services p-3 py-4 d-block">
+                <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
+                <div class="media-body pl-4">
+                  <h3 class="heading">Support Others</h3>
+                  <p>You can be there for someone close to you who isn’t being their usual self. There are many things you can do to make a difference.</p>
+                  <p><a href="{% url 'helpsomeonepage' %}" class="btn btn-white px-3 py-2 mt-2">VIEW MORE</a></p>
+                </div>
+              </div>      
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 d-flex services p-3 py-4 d-block">
+                <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
+                <div class="media-body pl-4">
+                  <h3 class="heading">Find professional help</h3>
+                  <p>Mental health professionals work in different ways so it’s important to find someone you’re comfortable with.</p>
+                  <p><a href="{% url 'prohelppage' %}" class="btn btn-white px-3 py-2 mt-2">VIEW MORE</a></p>
+                </div>
+              </div>    
+            </div>
+          </div>
+          </div>
+      </section>
+  
+  
+      <section class="ftco-section bg-light">
+          <div class="container-fluid">
+              <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-5 heading-section ftco-animate text-center">
+              <h2 class="mb-4">Understanding Depression and Anxiety</h2>
+              <p>Have you noticed that you’ve been feeling down or worried, and that getting through each day is a real struggle?</p>
+            </div>
+          </div>
+              <div class="row">
+                  <div class="col-md-12 ftco-animate">
+                      <div class="carousel-cause owl-carousel">
+                        {% for depression in Depression_articles %}
+                          <div class="item">
+                              <div class="cause-entry">
+                                  <a href="{{depression.article_link}}" class="img" target="_blank" ><img src="{{depression.article_image.url}}" alt=""></a>
+                                  <div class="text p-3 p-md-4">
+                                      <h3><a href="#">{{depression.article_heading}}</a></h3>
+                                      <p>{{depression.article_description}}</p>
+                                  </div>
+                              </div>
+                          </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="ftco-gallery">
+        <div class="d-md-flex">
+            <a href="static/images/c2.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c2.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a href="static/images/c1.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c1.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a href="static/images/c4.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c4.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a href="static/images/c5.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c5.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+        </div>
+        <div class="d-md-flex">
+            <a href="static/images/c3.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c3.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a href="static/images/c7.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c7.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a href="static/images/c6.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c6.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a href="static/images/c8.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(static/images/c8.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+  
+    <section class="ftco-section bg-light">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Need to Talk?</h2>
+            <p>Get connected to professionals available at time to change about how you are feeling or to ask a question.</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+        			<div class="d-flex mb-4">
+        				<div class="img" style="background-image: url(static/images/person_1.jpg);"></div>
+        				<div class="info ml-4">
+        					<h3><a href="https://oladoc.com/pakistan/rawalpindi/dr/anesthesiologist/hammad-firdous/1319878">Dr. Hammad Firdous</a></h3>
+        					<span class="position">Anesthesiologist, Psychologist</span>
+        					<div class="text">
+		        				<p><span>13 Years</span> Experience <br><a href="https://oladoc.com/pakistan/rawalpindi/dr/anesthesiologist/hammad-firdous/1319878">Online Video Consultation</a></p>
+		        			</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+        			<div class="d-flex mb-4">
+        				<div class="img" style="background-image: url(static/images/Doc_2.jpg);"></div>
+        				<div class="info ml-4">
+        					<h3><a href="https://oladoc.com/pakistan/rawalpindi/dr/psychologist/maryam-javed-abbasi/1616964">Ms. Maryam Javed Abbasi</a></h3>
+        					<span class="position">Psychologist - Clinical Psychology</span>
+        					<div class="text">
+		        				<p> <span>5 Years</span> Experience <a href="https://oladoc.com/pakistan/rawalpindi/dr/psychologist/maryam-javed-abbasi/1616964">Online Video Consultation</a></p>
+		        			</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+        			<div class="d-flex mb-4">
+        				<div class="img" style="background-image: url(static/images/Doc_1.jpg);"></div>
+        				<div class="info ml-4">
+        					<h3><a href="https://oladoc.com/pakistan/rawalpindi/dr/psychologist/shamsa-mukhtar/1323191">Ms. Shamsa Mukhtar</a></h3>
+        					<span class="position">Psychologist, Counselor - ADCP</span>
+        					<div class="text">
+		        				<p><span>3 Years</span> Experience <a href="https://oladoc.com/pakistan/rawalpindi/dr/psychologist/shamsa-mukhtar/1323191">Online Video Consultation</a></p>
+		        			</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </section>
+        </body>
+    {% endblock %}
+</html>

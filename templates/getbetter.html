@@ -1,0 +1,138 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Get Better - Time to Change{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  {% block body %}
+  <body>
+
+    <div class="hero-wrap" style="background-image: url('static/images/getbetter_bg.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html"></a></span> <span>Get Better from Depression and Anxiety</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">You can do a lot of things to help you start feeling better</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-counter ftco-intro" id="section-counter">
+      <div class="container">
+          <div class="row no-gutters">
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 color-3 align-items-stretch">
+            <div class="text">
+                <h3 class="mb-4">Even when it seems you can’t control your feelings, you can control what you do about things. Just taking a small first step is enough to get you on the path to enjoying life again.</h3>
+            </div>
+          </div>
+        </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+        </div>
+        <div class="col-md-6 pl-md-5 ftco-animate">
+          <h2 class="mb-4" >Start by talking to someone</h2>
+                  <hr style="color: black">
+          <p style="text-align: justify; text-justify: inter-word;">A good way to start dealing with what’s going on is to share how you’re feeling with someone you trust. This could be someone in your family or whānau, your partner, a friend, church leader or anyone in your community who you feel close to.</p>
+          <p style="text-align: justify; text-justify: inter-word;">It also helps if you don’t try to cope with stressful situations on your own. Consider turning to your friends and whānau. They can provide emotional support through their love (aroha), comfort, respect and concern. They may also give you advice and share new information, as well as practical support like getting the things you need or helping with things around the house.</p>
+          <p style="text-align: justify; text-justify: inter-word;">If you have good social support you tend to have better physical and mental health, and find it easier to cope with challenging events and situations. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        
+        <div class="col-md-6 pl-md-5 ftco-animate">
+          <h2 class="mb-4" >Things you can do yourself</h2>
+          <hr style="color: black">
+          <p style="text-align: justify; text-justify: inter-word;">There are a lot of self-help strategies that can improve all four aspects of your life – your body (tinana), your spirit (wairua), your social circle (whānau) and your mind (hinengaro). The great thing about self-help is that you’re in charge, so you can try different strategies and see what works for you. Friends and whānau can also get involved by checking in with how you’re getting on or even doing some of the activities suggested in this section with you.</p><br>
+                  <p><a href="#" class="btn btn-white px-3 py-2 mt-2" style="color: #fd7e14;">LEARN SELF-HELP</a></p>
+                  
+        </div>
+              <div class="col-md-6 d-flex ftco-animate">
+          <div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+        </div>
+        <div class="col-md-6 pl-md-5 ftco-animate">
+          <h2 class="mb-4" >Treatments available</h2>
+          <hr style="color: black">
+          <p style="text-align: justify; text-justify: inter-word;">It might be recommended that you try medication or therapy to help deal with your symptoms. There are many different types of treatment and knowing more about them will help you choose the right one.</p><br>
+                  <p><a href="#" class="btn btn-white px-3 py-2 mt-2" style="color: #fd7e14;">LEARN ABOUT TREATMENTS</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        
+        <div class="col-md-6 pl-md-5 ftco-animate">
+          <h2 class="mb-4" >People who can help you</h2>
+          <hr style="color: black">
+          <p style="text-align: justify; text-justify: inter-word;">If you need extra support (tautoko), there are people trained to help with depression or anxiety. You can get help in face-to-face meetings with health professionals or by contacting a helpline. Some of these people will have experienced mental distress themselves, so they’ll understand what you are going through. Don't be afraid to ask for help – the sooner the better.</p><br>
+                  <p><a href="{% url 'prohelppage' %}" class="btn btn-white px-3 py-2 mt-2" style="color: #fd7e14;">FIND SOMEONE TO HELP YOU</a></p>
+                  
+        </div>
+              <div class="col-md-6 d-flex ftco-animate">
+          <div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
+    <div class="container" style="width: 50%;">
+      <div class="row no-gutters">
+              <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 color-2 align-items-stretch">
+                  <div class="text">
+                      <h3 class="mb-4">What Next?</h3>
+                      <p>By learning more about depression and anxiety, how it is treated, and what can help, you’ll have a better understanding of what you can do to help their recovery.</p>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        
+    
+    </div>
+  </section>
+
+
+  <!-- loader
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
+    
+  </body>
+  {% endblock %}
+</html>

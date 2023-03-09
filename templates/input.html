@@ -1,0 +1,34 @@
+
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Voice Sentiment Analysis - Time to Change{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  {% block body %}
+  <body style="background-image: url('static/images/bg_index.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
+    <section class="section">
+      <div class="container" style="width: 60%; margin: 6rem auto 6rem auto; box-shadow: 0 0.2rem 1.3rem 0.2rem rgba(0, 0, 0, 0.1); border-radius: 0.5rem; background-color: #fff; padding-top: 3rem; padding-bottom: 3rem; padding-right: 3rem; padding-left: 3rem; " >
+
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <center><h2  style="color: black;">Voice Sentiment Analyzer</h2></center>
+  <center><h3  style="color: black;"> Use sentiment analysis to quickly detect emotions in voice data.</h3></center><hr><br>
+  <center><input type="file" name="audio_file"><br></center><br>
+  <center><input type="submit" style="align: center;
+  display: inline-block;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  background: #fd7e14;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;" value="Analyze"></center>
+</form>
+
+</div>
+</section>
+</body>
+{% endblock %}
+</html>

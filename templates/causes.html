@@ -1,0 +1,125 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}Causes - Time to Change{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  {% block body %}
+  <body>
+
+    <div class="hero-wrap" style="background-image: url('static/images/causes_bg.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html"></a></span> <span>Depression and Anxiety Causes</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">There’s no one reason why it happens but these are common triggers</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-counter ftco-intro" id="section-counter">
+      <div class="container">
+          <div class="row no-gutters">
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 color-3 align-items-stretch">
+            <div class="text">
+                <h3 class="mb-4">All sorts of things affect mental health, from major life events to ongoing and persisting challenges. </h3>
+            </div>
+          </div>
+        </div>
+          </div>
+      </div>
+  </section>
+
+
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex ftco-animate">
+    				<div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 ftco-animate">
+    				<h2 class="mb-4" >Your Past</h2>
+                    <hr style="color: black">
+    				<p style="text-align: justify; text-justify: inter-word;">Research tells us that unfavourable experiences during childhood increase the risk of experiencing distress. And there is also evidence that shows genetics can play a role in whether we experience later depression or anxiety.</p><br>
+                    <p><a href="#" class="btn btn-white px-3 py-2 mt-2" style="color: #fd7e14;">LEARN MORE</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			
+    			<div class="col-md-6 pl-md-5 ftco-animate">
+    				<h2 class="mb-4" >Major life changes</h2>
+    				<hr style="color: black">
+    				<p style="text-align: justify; text-justify: inter-word;">Whether it’s an event you’ve been expecting, or something that comes completely out of the blue, big changes can have a huge impact on your life. These big changes can trigger or make distress worse. A change to your or a family (whānau) member's role in life might be more challenging than expected.</p><br>
+                    <p><a href="#" class="btn btn-white px-3 py-2 mt-2" style="color: #fd7e14;">LEARN MORE</a></p>
+    			</div>
+                <div class="col-md-6 d-flex ftco-animate">
+    				<div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex ftco-animate">
+    				<div class="img img-about align-self-stretch" style="background-image: url(static/images/About_Sub.jpg); width: 100%;"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 ftco-animate">
+    				<h2 class="mb-4" >Ongoing challenges</h2>
+                    <hr style="color: black">
+    				<p style="text-align: justify; text-justify: inter-word;"> An initial challenge or difficult situation could trigger or build up your distress. Sometimes these challenges build up and make the conflicts and frustrations of everyday life worse. These difficulties might include problems with your family (whānau); unemployment or financial stress; love or sex problems; ongoing illness/disability or problems with work (mahi) or school (kura).</p><br>
+                    <p><a href="#" class="btn btn-white px-3 py-2 mt-2" style="color: #fd7e14;">LEARN MORE</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
+    	<div class="container" style="width: 50%;">
+    		<div class="row no-gutters">
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                  <div class="block-18 color-2 align-items-stretch">
+                    <div class="text">
+                        <h3 class="mb-4">What Next?</h3>
+                        <p>Once you understand what is contributing to the way you feel, you can learn what to do to start feeling better.</p>
+                        <p><a href="{% url 'getbetterpage' %}" class="btn btn-white px-3 py-2 mt-2">HOW TO GET BETTER</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+          
+    	
+    	</div>
+    </section>
+
+
+
+
+
+    
+    
+		
+
+    
+    
+  
+
+  <!-- loader
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
+
+
+
+    
+  </body>
+  {% endblock %}
+</html>

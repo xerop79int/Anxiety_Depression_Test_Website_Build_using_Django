@@ -1,0 +1,247 @@
+
+{% block content %}
+  <h1>Anxiety Test Results:</h1>
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Anxiety Test Results</title>
+        <style>
+          /* Add your CSS styles here */
+          body {
+            background-image: url("/FYP/static/images/bg_index.jpg");
+            background-size: cover;
+          }
+          a {
+            text-decoration: none; /* removes underline */
+            color: #0098ff; /* changes link color */
+        }
+
+          h1 {
+            color: white;
+            text-align: center;
+          }
+          .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto;
+            display: none;
+          }
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        </style>
+      </head>
+
+
+{% block body %}
+<body style="background-image: url('/static/images/bg_index.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
+  <section class="section">
+    <div class="container" style="width: 60%; margin: 6rem auto 6rem auto; box-shadow: 0 0.2rem 1.3rem 0.2rem rgba(0, 0, 0, 0.1); border-radius: 0.5rem; background-color: #fff; " >
+    <div class="header" style="padding: 4.5rem; margin-bottom: 2rem;">
+  <input  type="hidden" id="Url" data-url="{% url 'mainscreen' %}" />
+  <div class="loader" id="loader"></div> 
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <h2 id="question">Anxiety Test Results:</h2>
+      {% if results %}
+  {% with results.0 as current_result %}
+    {% if results|length > 1 %}
+      {% with results|slice:"1:" as previous_results %}
+        <h2>Current Results</h2>
+        <ul>
+          <li>Current Score: {{ current_result.score }}</li>
+          <li>Current Quiz: {{ current_result.quiz }}</li>
+        </ul>
+
+        <h2>Previous Results</h2>
+        <ul>
+          {% for result in previous_results %}
+            <li>Previous Score: {{ result.score }}</li>
+            <li>Previous Quiz: {{ result.quiz }}</li>
+          {% empty %}
+            <li>No previous results.</li>
+          {% endfor %}
+        </ul>
+      {% endwith %}
+    {% else %}
+      <h2>Current Results</h2>
+      <ul>
+        <li>Current Score: {{ current_result.score }}</li>
+        <li>Current Quiz: {{ current_result.quiz }}</li>
+      </ul>
+      <p>No previous results.</p>
+    {% endif %}
+  {% endwith %}
+{% else %}
+  <p>No results found.</p>
+{% endif %}
+      
+    <div class="loader"></div>
+    <div id="results" style="display: none;">
+    
+      {% if 0 <= score <= 6 %}
+      
+        <p>Your score is {{ results.score }} which falls in the low range. Here are some tips to improve:</p>
+        <ul>
+          <li>Get more exercise</li>
+          <li>Practice relaxation techniques such as yoga or meditation</li>
+          <li>Get enough sleep</li>
+          <li>Reach out to friends and family for support</li>
+        </ul>
+      {% elif 7 <= score <= 15 %}
+        <p>Your score is {{ results.score }}. Here are some suggestions to help you improve your situation:</p>
+        <ul>
+          <li>Seek help from a mental health professional</li>
+          <li>Join a support group</li>
+          <li>Find a healthy way to cope with stress such as journaling or art</li>
+          <li>Make time for self-care activities</li>
+        </ul>
+        <p>Remember, there is no shame in seeking help. You are not alone.</p>
+      {% elif 16 <= score <= 21 %}
+        <p>Your score is {{ results.score }}. Anxiety may be getting in the way of your daily life. It is strongly advised that you seek help from a mental health professional.</p>
+        <p>You may also want to consider some self-help strategies such as:</p>
+        <ul>
+          <li>Practicing mindfulness and relaxation techniques</li>
+          <li>Avoiding alcohol and drugs, as they can make anxiety worse</li>
+          <li>Getting regular exercise</li>
+          <li>Getting enough sleep</li>
+        </ul>
+      {% endif %}
+      <p>Here are some resources for seeking help:</p>
+      <ul>
+        <li><a href="https://www.nimh.nih.gov/health/find-help/index.shtml">National Institute of Mental Health</a></li>
+        <li><a href="https://www.psychologytoday.com/us/therapists">Find a therapist on Psychology Today</a></li>
+        <li><a href="https://www.samhsa.gov/find-help/national-helpline">Substance Abuse and Mental Health Services Administration National Helpline</a></li>
+      </ul>
+    </div>
+    
+    <script>
+      var loader = document.querySelector('.loader');
+      var results = document.getElementById('results');
+      setTimeout(function() {
+        loader.style.display
+        = 'none';
+        results.style.display = 'block';
+        }, 100);
+    </script>
+      <br>
+      <center>
+        <a href="/" style="  
+        align: center;
+        display: inline-block;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: black;
+        padding-left: 1.5rem;
+        background: #fd7e14;
+        border-radius: 10px;
+        
+        cursor: pointer;
+        border: none;">
+        Home
+        </a>
+        </center>
+      </form>
+      
+      
+    
+      
+    </div>
+   
+  </div>
+</div>
+</div>
+</section>
+</body>
+{% endblock %}
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Depression Test Results</title>
+    <style>
+      /* Add your CSS styles here */
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        margin: 0 auto;
+        display: none;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Depression Test Results:</h1>
+    <div class="loader"></div>
+    <div id="results" style="display: none;">
+      {% if 0 <= score <= 6 %}
+        <p>Your score is {{ score }} which falls in the low range. Here are some tips to improve:</p>
+        <ul>
+          <li>Get more exercise</li>
+          <li>Practice relaxation techniques such as yoga or meditation</li>
+          <li>Get enough sleep</li>
+          <li>Reach out to friends and family for support</li>
+        </ul>
+      {% elif 7 <= score <= 15 %}
+        <p>Your score is {{ score }}. Here are some suggestions to help you improve your situation:</p>
+        <ul>
+          <li>Seek help from a mental health professional</li>
+          <li>Join a support group</li>
+          <li>Find a healthy way to cope with stress such as journaling or art</li>
+          <li>Make time for self-care activities</li>
+        </ul>
+        <p>Remember, there is no shame in seeking help. You are not alone.</p>
+      {% elif 16 <= score <= 21 %}
+        <p>Your score is {{ score }}. Anxiety may be getting in the way of your daily life. It is strongly advised that you seek help from a mental health professional.</p>
+        <p>You may also want to consider some self-help strategies such as:</p>
+        <ul>
+          <li>Practicing mindfulness and relaxation techniques</li>
+          <li>Avoiding alcohol and drugs, as they can make anxiety worse</li>
+          <li>Getting regular exercise</li>
+          <li>Getting enough sleep</li>
+        </ul>
+      {% endif %}
+      <p>Here are some resources for seeking help:</p>
+      <ul>
+        <li><a href="https://www.nimh.nih.gov/health/find-help/index.shtml">National Institute of Mental Health</a></li>
+        <li><a href="https://www.psychologytoday.com/us/therapists">Find a therapist on Psychology Today</a></li>
+        <li><a href="https://www.samhsa.gov/find-help/national-helpline">Substance Abuse and Mental Health Services Administration National Helpline</a></li>
+      </ul>
+      <button onclick="location.reload()">Take the quiz again</button>
+    </div>
+    
+    <script>
+      var loader = document.querySelector('.loader');
+      var results = document.getElementById('results');
+      setTimeout(function() {
+        loader.style.display
+        = 'none';
+        results.style.display = 'block';
+        }, 3000);
+    </script>
+      
+  </body>
+</html> -->
